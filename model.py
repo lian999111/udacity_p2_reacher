@@ -70,7 +70,7 @@ class GaussianActorCriticNetwork(nn.Module):
             state: current state
         """
         action_mean = self.actor_net(state)
-        dist = torch.distributions.Normal(action_mean, self.std)
+        dist = torch.distributions.Normal(action_mean, F.relu(self.std))
         action = torch.clamp(dist.rsample(), min=-1, max=1)
         log_prob = dist.log_prob(action)
         # entropy can be added
