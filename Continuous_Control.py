@@ -92,10 +92,8 @@ def train_a2c(n_episode=300, rollout_length=6, goal=35):
 
         avg_score_over_window = np.mean(score_window)
         avg_scores_over_window.append(avg_score_over_window)
-        if i_episode % 100 == 0:
-            print('Episode {}\tAverage Score: {:.2f}'.format(i_episode, avg_score_over_window))
         if avg_score_over_window >= goal:
-            print('\nEnvironment solved in {:d} episodes!\tAverage Score: {:.2f}'.format(i_episode-100, avg_score_over_window))
+            print('\nEnvironment solved in {:d} episodes!\tAverage Score: {:.2f}'.format(i_episode, avg_score_over_window))
             torch.save({"state_dict": agent.network.state_dict()}, "result/checkpoint.pth")
             break
     
