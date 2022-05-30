@@ -34,7 +34,9 @@ The environment is considered solved, when the average (over 100 episodes) of th
 
 ### Getting Started
 
-1. Download the environment from one of the links below.  You need only select the environment that matches your operating system:
+1. Follow the [instructions in the course GitHub repository](https://github.com/udacity/Value-based-methods#dependencies) to set up the Python environment. These instructions can be found in README.md at the root of the repository. By following these instructions, you will install PyTorch, the ML-Agents toolkit, and a few more Python packages required to complete the project.
+
+2. Download the environment from one of the links below.  You need only select the environment that matches your operating system:
 
     - **_Version 2: Twenty (20) Agents_**
         - Linux: [click here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P2/Reacher/Reacher_Linux.zip)
@@ -46,9 +48,9 @@ The environment is considered solved, when the average (over 100 episodes) of th
 
     (_For AWS_) If you'd like to train the agent on AWS (and have not [enabled a virtual screen](https://github.com/Unity-Technologies/ml-agents/blob/master/docs/Training-on-Amazon-Web-Service.md)), then please use [this link](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P2/Reacher/one_agent/Reacher_Linux_NoVis.zip) (version 1) or [this link](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P2/Reacher/Reacher_Linux_NoVis.zip) (version 2) to obtain the "headless" version of the environment.  You will **not** be able to watch the agent without enabling a virtual screen, but you will be able to train the agent.  (_To watch the agent, you should follow the instructions to [enable a virtual screen](https://github.com/Unity-Technologies/ml-agents/blob/master/docs/Training-on-Amazon-Web-Service.md), and then download the environment for the **Linux** operating system above._)
 
-2. Place the file in the DRLND GitHub repository, in the `p2_continuous-control/` folder, and unzip (or decompress) the file. 
+3. Place the file in the DRLND GitHub repository, in the `p2_continuous-control/` folder, and unzip (or decompress) the file. 
 
-3. Change the `file_name` parameter in __Continuous_Control.py__ to match the location of the Unity environment that you downloaded.
+4. Change the `file_name` parameter in __Continuous_Control.py__ to match the location of the Unity environment that you downloaded.
 
 - **Mac**: `"path/to/Reacher.app"`
 - **Windows** (x86): `"path/to/Reacher_Windows_x86/Reacher.exe"`
